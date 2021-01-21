@@ -21,6 +21,7 @@ The most important things can be configured via ENV:
 | LOG_SERVER_PORT | gelf input port                               | 12201      |
 | LOGGER_USERNAME | Username for http auth                        | gelf       |
 | LOGGER_PASSWORD | Password for http auth                        | fleg       |
+| SUBPATH_URI     | subpath on your env                           | /          |
 
 for more details, have a look at `lib/constants.rb`.
 

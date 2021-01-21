@@ -5,4 +5,6 @@ require File.expand_path('lib/boot.rb', __dir__)
 require './app'
 $stdout.sync = true
 
-run Rack::URLMap.new('/' => SinatraTemplate)
+subpath = ENV['SUBPATH_URI'] || '/'
+
+run Rack::URLMap.new(subpath => SinatraTemplate)
