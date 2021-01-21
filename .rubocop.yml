@@ -1,0 +1,28 @@
+AllCops:
+  UseCache: true
+  DisplayCopNames: true
+  ExtraDetails: true
+  DisplayStyleGuide: true
+  Exclude:
+    - 'vendor/**/*'
+    - 'tmp/**'
+    - 'bin/**'
+    - '.bundle'
+    - '.cache'
+    - '.gem'
+    - 'README.md'
+
+Metrics/LineLength:
+  Max: 120
+  
+Metrics/MethodLength:
+  Max: 15
+
+Security/YAMLLoad:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false

@@ -1,0 +1,15 @@
+---
+version: '3.1'
+services:
+##############################################################
+# sinatra_template
+##############################################################
+  sinatra_template:
+    tty: true
+    stdin_open: true
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - 4567:4567
+    env_file: env
