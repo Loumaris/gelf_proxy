@@ -12,7 +12,7 @@ You can run this as container or standalone - or in any cluster.
 
 ### configuration
 
-The most important things can be configured via ENV:
+The most important things can be configured via ENV or yml file (`config/proxy.yml`):
 
 | ENV             | description                                   | default    |
 |-----------------|-----------------------------------------------|------------|
@@ -23,7 +23,8 @@ The most important things can be configured via ENV:
 | LOGGER_PASSWORD | Password for http auth                        | fleg       |
 | SUBPATH_URI     | subpath on your env                           | /          |
 
-for more details, have a look at `lib/constants.rb`.
+Please notice that env-configuration will overwrite yml configuration.
+The `SUBPATH_URI` can only be set via ENV, because it is needed before the app has been started.
 
 ### post json example
 
