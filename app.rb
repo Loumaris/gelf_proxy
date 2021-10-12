@@ -34,8 +34,9 @@ class SinatraTemplate < Sinatra::Base
     end
   else
     register Sinatra::Reloader
-    also_reload 'lib/*'
   end
+  
+  also_reload 'lib/*'
 
   #############################################################################
   # index
