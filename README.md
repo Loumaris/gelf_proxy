@@ -1,11 +1,11 @@
 
-# gelf proxy service
+# logging proxy service
 
-Just a simple sinatra app that will forward posted json to a gelf input of graylog with basic auth protection.
+Just a simple sinatra app that will forward posted json to a std output with basic auth protection.
 You can run this as container or standalone - or in any cluster.
 
 ## Environment
-* Ruby 2.6.6
+* Ruby 3.0.2
 * Sinatra 2.1.0
 
 ## usage
@@ -17,8 +17,6 @@ The most important things can be configured via ENV or yml file (`config/proxy.y
 | ENV             | description                                   | default    |
 |-----------------|-----------------------------------------------|------------|
 | APP_NAME        | will set the app name to the graylog facility | gelf proxy |
-| LOG_SERVER      | logging server url or ip                      |            |
-| LOG_SERVER_PORT | gelf input port                               | 12201      |
 | LOGGER_USERNAME | Username for http auth                        | gelf       |
 | LOGGER_PASSWORD | Password for http auth                        | fleg       |
 | SUBPATH_URI     | subpath on your env                           | /          |
