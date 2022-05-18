@@ -4,7 +4,6 @@ ruby '3.0.2'
 source 'https://rubygems.org'
 
 gem 'puma'
-gem 'rack-ssl'
 gem 'sinatra'
 gem 'sinatra-contrib'
 

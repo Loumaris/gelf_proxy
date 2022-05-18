@@ -23,10 +23,9 @@ class SinatraTemplate < Sinatra::Base
   LOGGER_PASSWORD = ENV['LOGGER_PASSWORD'] || settings.logger_password || 'fleg'
 
   #############################################################################
-  # production env settings, force ssl and auth
+  # production env settings, force auth
   #############################################################################
   if ENV['RACK_ENV'] == 'production'
-    use Rack::SSL # force SSL
     use Rack::Auth::Basic, 'Protected Area' do |username, password|
       username == LOGGER_USERNAME && password == LOGGER_PASSWORD
     end
