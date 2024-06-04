@@ -48,6 +48,8 @@ class GelfProxy < Sinatra::Base
     log = JSON.parse(request.body.read)
     log.store('facility', APP_NAME)
     puts log.to_json
+  rescue
+    puts request.body.read
   end
 
   ## Run the app when file called ##
