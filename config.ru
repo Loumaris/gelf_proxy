@@ -7,4 +7,4 @@ $stdout.sync = true
 
 subpath = ENV['SUBPATH_URI'] || '/'
 
-run Rack::URLMap.new(subpath => SinatraTemplate)
+run Rack::URLMap.new(subpath => GelfProxy)

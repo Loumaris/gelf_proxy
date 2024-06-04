@@ -8,7 +8,7 @@ unless ENV['RACK_ENV'] == 'production'
   require 'pry'
 end
 
-class SinatraTemplate < Sinatra::Base
+class GelfProxy < Sinatra::Base
   before do
     content_type :json
   end
@@ -47,7 +47,7 @@ class SinatraTemplate < Sinatra::Base
   post '/log' do
     log = JSON.parse(request.body.read)
     log.store('facility', APP_NAME)
-    puts log
+    puts log.to_json
   end
 
   ## Run the app when file called ##

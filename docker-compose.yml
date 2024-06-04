@@ -4,7 +4,7 @@ services:
 ##############################################################
 # sinatra_template
 ##############################################################
-  sinatra_template:
+  gelf_proxy:
     tty: true
     stdin_open: true
     build: .
