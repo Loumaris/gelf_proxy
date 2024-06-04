@@ -6,6 +6,7 @@ services:
 ##############################################################
   gelf_proxy:
     tty: true
+    platform: linux/amd64
     stdin_open: true
     build: .
     volumes:
