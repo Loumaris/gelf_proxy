@@ -84,6 +84,7 @@ PLATFORMS
 
 DEPENDENCIES
   irb
+  json
   pry
   puma
   rackup (~> 2.1)

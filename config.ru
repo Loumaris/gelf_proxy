@@ -7,4 +7,6 @@ $stdout.sync = true
 
 subpath = ENV['SUBPATH_URI'] || '/'
 
+use Rack::RewindableInput::Middleware
+
 run Rack::URLMap.new(subpath => GelfProxy)

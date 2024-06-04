@@ -2,6 +2,8 @@
 
 require 'sinatra/base'
 require 'sinatra/config_file'
+require 'sinatra/json'
+require 'json'
 
 unless ENV['RACK_ENV'] == 'production'
   require 'sinatra/reloader'
@@ -45,6 +47,7 @@ class GelfProxy < Sinatra::Base
   # log
   #############################################################################
   post '/log' do
+    request.body.rewind
     log = JSON.parse(request.body.read)
     log.store('facility', APP_NAME)
     puts log.to_json

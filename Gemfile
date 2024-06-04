@@ -7,6 +7,7 @@ gem 'puma'
 gem "rackup", "~> 2.1"
 gem 'sinatra'
 gem 'sinatra-contrib'
+gem 'json'
 
 group :development do
   gem 'irb'
